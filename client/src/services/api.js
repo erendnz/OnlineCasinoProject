@@ -1,7 +1,7 @@
 // Function to get the current coin balance from the server
 export const fetchCoins = async () => {
   try {
-    const response = await fetch('/api/coins'); // headers kaldırıldı
+    const response = await fetch('/api/coins'); 
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
