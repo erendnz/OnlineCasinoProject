@@ -1,12 +1,7 @@
 // Function to get the current coin balance from the server
 export const fetchCoins = async () => {
   try {
-    const response = await fetch('/api/coins', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+    const response = await fetch('/api/coins'); // headers kaldırıldı
 
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -40,6 +35,7 @@ export const spin = async () => {
   }
 };
 
+// Function to reset coin balance
 export const resetCoins = async () => {
   try {
     const response = await fetch('/api/resetCoins', {
